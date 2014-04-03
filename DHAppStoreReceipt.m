@@ -160,6 +160,10 @@
     return [inAppReceiptsByProductId objectForKey:productId];
 }
 
+- (NSData *)bundleIdData {
+    return [[self attributeByType:DH_ATTRIBUTE_TYPE_BUNDLE_ID] dataValue];
+}
+
 - (NSString *)bundleId {
     return [[self attributeByType:DH_ATTRIBUTE_TYPE_BUNDLE_ID] stringValue];
 }

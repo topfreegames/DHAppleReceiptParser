@@ -9,7 +9,7 @@
 @class DHInAppReceipt;
 
 typedef enum {
-    DH_ATTRIBUTE_TYPE_BUNDLE_ID = 1,
+    DH_ATTRIBUTE_TYPE_BUNDLE_ID = 2,
     DH_ATTRIBUTE_TYPE_APPLICATION_VERSION = 3,
     DH_ATTRIBUTE_TYPE_OPAQUE_VALUE = 4,
     DH_ATTRIBUTE_TYPE_SHA_HASH = 5,
@@ -51,6 +51,7 @@ typedef enum {
 - (id)initWithURL:(NSURL *)receiptURL;
 - (DHInAppReceipt *)receiptForProductId:(NSString *)productId;
 
+@property(readonly) NSData *bundleIdData;
 @property(readonly) NSString *bundleId;
 @property(readonly) NSString *applicationVersion;
 @property(readonly) NSData *opaqueValue;
