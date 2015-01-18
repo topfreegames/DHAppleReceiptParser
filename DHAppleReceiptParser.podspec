@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DHAppleReceiptParser"
-  s.version      = "1.0.2.3"
+  s.version      = "1.0.2.4"
   s.summary      = "Parser for the receipt file available in iOS 7."
   s.description  = <<-DESC
                    A library to parse the apple receipt file in iOS 7 as defined here:
@@ -24,7 +24,7 @@ https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreRec
   s.public_header_files = "DHAppStoreReceipt.h"
   s.preserve_paths = 'lib/libcrypto.a', 'openssl'
   s.libraries    = "crypto"
-  s.dependency 'OpenSSL-Universal'
+  s.dependency 'OpenSSL-Universal', '~> 1.0.1.k'
   s.xcconfig     = {
     'LIBRARY_SEARCH_PATHS' => '"/code/DHAppleReceiptParser/lib"',
     'HEADER_SEARCH_PATHS' => '"/code/DHAppleReceiptParser/include/**" "/code/DHAppleReceiptParser/include/openssl"',
